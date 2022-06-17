@@ -5,16 +5,44 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    srand(time(0));
+    int input = (rand() % 4) + 1;
+    switch (input)
+    {
+    case 1:
+    {
+        std::cout << "What is the square root of 9?\n\na: 1\nb: 5\nc: 3\nd: 8\n\n";
+        break;
+    }
+    case 2:
+    {
+        std::cout << "What is the largest state in the United States?\n\na: Rhode Island\nb: Texas\nc: Alaska\nd: Connecticut\n\n";
+        break;
+    }
+    case 3:
+    {
+        std::cout << "What is the lowest point on Earth?\n\na: Death Valley\nb: Grand Canyon\nc: Marianas Trench\nd: Sahara Desert\n\n";
+        break;
+    }
+    case 4:
+    {
+        std::cout << "Where is the only place n earth where you can find both alligators and crocodiles in the wild?\n\na: Japan\nb: Madagascar\nc: Florida\nd: India\n\n";
+        break;
+    }
+    }
+    char temp;
+    std::cin >> temp;
+    if (temp == 'c')
+    {
+        std::cout << "CORRECT!";
+        std::cin.ignore();
+    }
+    else
+    {
+        std::cout << "Wrong";
+        std::cin.ignore();
+    }
+    std::cin.ignore();
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
